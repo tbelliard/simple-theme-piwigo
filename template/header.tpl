@@ -32,8 +32,8 @@
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
 
-  {combine_css path="themes/simpleng/css/style.min.css" order="1"}
-  {combine_css path="themes/simpleng/css/bootstrap-responsive.min.css" order="2"}
+  {combine_css path="themes/simpleng_murmuran/css/style.min.css" order="1"}
+  {combine_css path="themes/simpleng_murmuran/css/bootstrap-responsive.min.css" order="2"}
   {get_combined_css}
 
   {foreach from=$themes item=theme}
@@ -60,9 +60,9 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   {get_combined_scripts load='header'}
-  {combine_script id='jquery' path='themes/simpleng/js/jquery-1.9.1.min.js'}
-  {combine_script id='bootstrap' require='jquery' path='themes/simpleng/js/bootstrap.min.js'}
-  {combine_script id='simpleng.scripts' require='jquery' path='themes/simpleng/js/scripts.js'}
+  {combine_script id='jquery' path='themes/simpleng_murmuran/js/jquery-1.9.1.min.js'}
+  {combine_script id='bootstrap' require='jquery' path='themes/simpleng_murmuran/js/bootstrap.min.js'}
+  {combine_script id='simpleng.scripts' require='jquery' path='themes/simpleng_murmuran/js/scripts.js'}
 
   {if not empty($head_elements)}
     {foreach from=$head_elements item=elt}{$elt}
@@ -76,8 +76,9 @@
 {if isset($MENUBAR)}{$MENUBAR}{/if}
 
 <div id="the_page" class="container">
-  <h1 id="gallery_title"><a href="{$U_HOME}">{$GALLERY_TITLE}</a></h1>
-
+  {if $BODY_ID != 'thePicturePage'}
+    <h1 id="gallery_title"><a href="{$U_HOME}">{$GALLERY_TITLE}</a></h1>
+  {/if}
   {if not empty($header_msgs)}
   <div class="header_msgs">
     {foreach from=$header_msgs item=elt}
@@ -86,7 +87,7 @@
   </div>
   {/if}
 
-  {if not empty($PAGE_BANNER) or not empty($header_notes) or isset($theSwiftHeader)}
+  {if (not empty($PAGE_BANNER) or not empty($header_notes) or isset($theSwiftHeader)) and $BODY_ID != 'thePicturePage'}
   <header id="theHeader">
     {$PAGE_BANNER}
     {if isset($theSwiftHeader)}{$theSwiftHeader}{/if}

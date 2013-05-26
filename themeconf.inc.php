@@ -1,10 +1,10 @@
 <?php
 /*
-Theme Name: SimpleNG
-Version: 3.1.2
-Description: SimpleNG theme for Piwigo
-Theme URI: http://piwigo.org/ext/extension_view.php?eid=602
-Author: Saïmon
+Theme Name: SimpleNG-Murmuran
+Version: 
+Description: SimpleNG theme for Piwigo (adapted to Murmuran)
+Theme URI: 
+Author: Saïmon (initial author) - Thomas Belliard (adaptations)
 Author URI: http://saimon.org/
 */
 
@@ -12,8 +12,8 @@ $themeconf = array(
   'parent' => 'default',
   'load_parent_css' => false,
   'load_parent_local_head' => false,
-  'name' => 'simpleng',
-  'theme_dir' => 'simpleng',
+  'name' => 'simpleng_murmuran',
+  'theme_dir' => 'simpleng_murmuran',
   'icon_dir' => 'themes/default/icon',
   'img_dir'      => 'themes/default/images',
   'mime_icon_dir' => 'themes/default/icon/mimetypes/',

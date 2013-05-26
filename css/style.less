@@ -58,6 +58,10 @@ blockquote {
   margin-bottom: 1em;
 }
 
+.navbar .nav > li#mbLSM > ul {
+  padding: 10px 15px;
+}
+
 #copyright {
   margin: 1em 0;
   text-transform: uppercase;
@@ -100,6 +104,10 @@ blockquote {
 
 #thePicturePage h2 {
   font-size: 20px;
+}
+
+#thePicturePage {
+  padding-top: 0px;
 }
 
 // Tags
@@ -246,6 +254,13 @@ input, textarea, select {
   }
   figcaption {
     margin: 1em;
+  }
+  
+  & > div:last-child {
+    padding-top: 15px;
+  }
+  div.fb-like {
+    height: 20px;
   }
 }
 
@@ -452,6 +467,10 @@ input, textarea, select {
   body {
     padding-top: 60px;
   }
+  body#thePicturePage {
+    padding-top: 0px;
+  }
+  
   .subcontent {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.15);
     .border-radius(6px);
