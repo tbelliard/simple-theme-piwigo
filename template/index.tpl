@@ -9,6 +9,7 @@
     {if isset($U_SLIDESHOW)}
     <li><a href="{$U_SLIDESHOW}" title="{'slideshow'|@translate}" rel="nofollow"><i class="icon-play icon-white"></i></a></li>
     {/if}
+    {if !empty($PLUGIN_INDEX_BUTTONS)}{foreach from=$PLUGIN_INDEX_BUTTONS item=button}<li>{$button}</li>{/foreach}{/if}
     {if !empty($PLUGIN_INDEX_ACTIONS)}{$PLUGIN_INDEX_ACTIONS}{/if}
   </ul>
   {/if}
@@ -70,12 +71,18 @@
 </div>
 {/if}
 
+{if !empty($CONTENT)}{$CONTENT}{/if}
+
 {if !empty($CATEGORIES)}{$CATEGORIES}{/if}
 {if !empty($cats_navbar)}
   {include file='navigation_bar.tpl'|@get_extent:'navbar' navbar=$cats_navbar}
 {/if}
 
-{if !empty($THUMBNAILS)}{$THUMBNAILS}{/if}
+{if !empty($THUMBNAILS)}
+<ul id="thumbnails" class="thumbnails">
+  {$THUMBNAILS}
+</ul>
+{/if}
 {if !empty($thumb_navbar)}
   {include file='navigation_bar.tpl'|@get_extent:'navbar' navbar=$thumb_navbar}
 {/if}

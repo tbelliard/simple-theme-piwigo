@@ -1,7 +1,7 @@
 <?php
 /*
 Theme Name: SimpleNG-Murmuran
-Version: 
+Version: 3.2.4
 Description: SimpleNG theme for Piwigo (adapted to Murmuran)
 Theme URI: 
 Author: Saïmon (initial author) - Thomas Belliard (adaptations)
@@ -18,7 +18,8 @@ $themeconf = array(
   'img_dir'      => 'themes/default/images',
   'mime_icon_dir' => 'themes/default/icon/mimetypes/',
   'local_head' => 'local_head.tpl',
-  'url' => 'http://saimon.org/simple-theme-piwigo/'
+  'url' => 'http://saimon.org/simple-theme-piwigo/',
+  'colorscheme' => 'dark'
 );
 
 // set this if you want to restrict the width of pictures to a specifc width
