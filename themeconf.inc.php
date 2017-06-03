@@ -1,7 +1,7 @@
 <?php
 /*
 Theme Name: SimpleNG-Murmuran
-Version: 3.2.4
+Version: 3.2.5
 Description: SimpleNG theme for Piwigo (adapted to Murmuran)
 Theme URI: 
 Author: Saïmon (initial author) - Thomas Belliard (adaptations)
